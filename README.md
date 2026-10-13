@@ -42,14 +42,9 @@
 
 ## 🏗️ Архитектура
 
-```mermaid
-flowchart LR
-    C([Клиент]) -->|HTTP / JSON| Ctrl[BookController]
-    Ctrl --> Svc[BookService]
-    Svc --> Repo[BookRepository]
-    Repo -->|Hibernate| DB[(PostgreSQL)]
-    Ctrl -.ошибки.-> Err[ApiExceptionHandler]
-```
+<div align="center">
+  <img src="docs/architecture.svg" alt="Схема архитектуры: клиент, контроллер, сервис, репозиторий, PostgreSQL" width="900">
+</div>
 
 Слои разделены по ответственности:
 
